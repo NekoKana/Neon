@@ -4,8 +4,8 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 // .envからAPIのBASE_URLを読み込む
+
 axios.defaults.baseURL = import.meta.env.VITE_API_BASE_URL
-axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 const app = createApp(App)
 app.use(router)
 app.use(store)

@@ -1,8 +1,8 @@
 <script setup>
     import { reactive } from 'vue';
-    import profile from '../components/profile.vue';
+    import Profile from '../components/Profile.vue';
 </script>
 
 <template>
-    <profile />
+    <Profile />
 </template>
