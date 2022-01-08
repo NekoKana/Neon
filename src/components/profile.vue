@@ -57,26 +57,126 @@ import axios from 'axios'
                 console.log(err)
             })    
     })
+//onMounted (() => {
+//        axios
+//            .post('http://60.130.133.219/get_user',{
+//                user_id: user_id,
+//                token: token,
+//            })
+//            .then((res) => {
+//                console.log(res);
+//                console.log(res.data_header.result_code)
+//                profile = res.data;
+//                console.log(res.data);
+//            })
+//            .catch((err) => {
+//                console.log(err)
+//            })
+//    })
 
     
 </script>
-
 <style>
-p{
-    text-align: left;
-}
+  .flex{
+    display:flex;
+    margin:5px 40px;
+    align-items: flex-end;
+    border:1px solid #999999;
+  }
+  /* .flex直下の子要素 */
+  .flex > div{
+    word-break: break-all;
+    overflow-wrap: anywhere;
+  }
+  
+  #img{
+      padding:30px;
+      align-content: center;
+  }
 </style>
 
 <template>
-    <figure class="image is-128x128">
-        <img class="is-rounded" alt="topImage" src='../assets/manaka.jpg'>
-    </figure>
-    <div class="columns">
-        <p class="column is-half is-size-3 has-text-centered">{{ profile.name }}</p>
-        <p class="column is-size-4 ">{{ profile.city }}</p>
+    <!--
+    <div class="is-flex ml-6">
+        <figure class="image is-128x128 mr-6" style="flex:0 0 128px">
+            <img class="is-rounded" alt="topImage" src='../assets/manaka.jpg'>
+        </figure>
+        
+        <div class="mr-6">
+            <div class="field is-grouped is-grouped-multiline">
+                <div class="control"><span class="tag is-link is-large">Link</span></div>
+                <div class="control"><span class="tag is-success is-large">Success</span></div>
+                <div class="control"><span class="tag is-black is-large">Black</span></div>
+                <div class="control"><span class="tag is-warning is-large">Warning</span></div>
+                <div class="control"><span class="tag is-danger is-large">Danger</span></div>
+                <div class="control"><span class="tag is-info is-large">Info</span></div>
+                <div class="control"><span class="tag is-link is-large">Link</span></div>
+                <div class="control"><span class="tag is-success is-large">Success</span></div>
+                <div class="control"><span class="tag is-black is-large">Black</span></div>
+                <div class="control"><span class="tag is-warning is-large">Warning</span></div>
+                <div class="control"><span class="tag is-danger is-large">Danger</span></div>
+                <div class="control"><span class="tag is-info is-large">Info</span></div>
+                <div class="control"><span class="tag is-link is-large">Link</span></div>
+                <div class="control"><span class="tag is-success is-large">Success</span></div>
+                <div class="control"><span class="tag is-black is-large">Black</span></div>
+                <div class="control"><span class="tag is-warning is-large">Warning</span></div>
+                <div class="control"><span class="tag is-danger is-large">Danger</span></div>
+                <div class="control"><span class="tag is-info is-large">Info</span></div>
+            </div>
+            <button class="ml-6 button is-primary">編集</button>
+        </div>
     </div>
-    <div class="columns">
-        <p class="column is-3 is-size-5">{{ birthDay }}</p>
-        <p class="column is-offset-1 is-size-5">{{ age }}歳</p>
+    -->
+
+
+    <div class="card m-6 pb-3">
+        <div class="card-content">
+            <div class="content">
+                <div class="columns">
+                    <div class="column is-one-fifth is-vcentered">
+                        <div style="border-right: 1px solid #505050; margin-right: -10px">
+                            <figure class="image is-128x128 ml-6 mr-3" style="flex:0 0 128px">
+                                <img class="is-rounded" alt="topImage" src='../assets/manaka.jpg'>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="column field is-grouped is-grouped-multiline ml-6">
+                            <div class="control"><span class="tag is-link is-large">Link</span></div>
+                            <div class="control"><span class="tag is-success is-large">Success</span></div>
+                            <div class="control"><span class="tag is-black is-large">Black</span></div>
+                            <div class="control"><span class="tag is-warning is-large">Warning</span></div>
+                            <div class="control"><span class="tag is-danger is-large">Danger</span></div>
+                            <div class="control"><span class="tag is-info is-large">Info</span></div>
+                            <div class="control"><span class="tag is-link is-large">Link</span></div>
+                            <div class="control"><span class="tag is-success is-large">Success</span></div>
+                            <div class="control"><span class="tag is-black is-large">Black</span></div>
+                            <div class="control"><span class="tag is-warning is-large">Warning</span></div>
+                            <div class="control"><span class="tag is-danger is-large">Danger</span></div>
+                            <div class="control"><span class="tag is-info is-large">Info</span></div>
+                    </div>
+                    <div class="column is-one-fifth">
+                        <button class="ml-6 button is-primary">編集</button>
+                    </div>
+                </div>
+
+                <div class="is-flex ml-6 is-align-items-flex-end">
+                    <div class="is-size-2 has-text-left" style="flex:0 0 450px;">{{profile.name}}</div>
+                    <div class="is-size-4 has-text-left pb-1" >{{profile.city}}</div>
+                </div>
+                <div class="is-flex mt-1 ml-6">
+                    <span class="is-size-5">{{ birthDay }}
+                    <span class="is-size-5">{{ age }}歳</span></span>
+                </div>
+                <div class="is-flex mt-1 ml-6">
+                    <div class="is-size-6 has-text-left">{{ Id }}</div>
+                </div>
+                <div class="is-flex mt-3 ml-6">
+                    <div class="is-size-6 has-text-left">あいうえおおおあｊどじょあｊどｊわどｊわおｄっじゃｗだ</div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <div class="mx-6" style="padding-top: 4px; border-bottom: 1px solid;"> </div>
+
 </template>
