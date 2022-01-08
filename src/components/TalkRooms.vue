@@ -28,7 +28,6 @@ import axios from 'axios';
             }
             )
             .then((res) => {
-                Object.assign(roomList, ref([]))
                 Object.assign(roomList, res.data.data.rooms)
                 console.log(roomList[1].room_name)
 
