@@ -185,4 +185,70 @@ import IDprefecture from '../js/IDprefecture';
 
     <div class="mx-6" style="padding-top: 4px; border-bottom: 1px solid;"> </div>
 
+    <div class="is-size-3 is-centerd my-5">参加中のグループ</div>
+
+    <div class="columns">
+        <div class="column is-half">
+            <div class="card ml-6 my-3">
+                <div class="columns">
+                    <div class="column is-two-third mx-5 is-size-2" style="padding-top:15px; padding-bottom:5px">
+                        <div class="is-size-3 has-text-left">ABCDEF</div>
+                    </div>
+                    <div class="column pt-5 ml-4" style="padding-top:3px; padding-bottom:5px">
+                        <div class="is-size-4 is-right"><font-awesome-icon icon="users" class="mr-2"/>15</div>
+                    </div>
+                </div>
+                <div class="is-size-4 mx-5 has-text-left" style="padding-bottom:25px">
+                    <p class="is-size-6">こんにちわこんにちわこんにちわこんにちわ</p>
+                </div>
+            </div>
+        </div>
+        <div class="column is-half">
+            <div class="card mr-6 my-3">
+                <div class="columns">
+                    <div class="column is-two-third mx-5 is-size-2" style="padding-top:15px; padding-bottom:5px">
+                        <div class="is-size-3 has-text-left">VWXYZ</div>
+                    </div>
+                    <div class="column pt-5 ml-4" style="padding-top:3px; padding-bottom:5px">
+                        <div class="is-size-4 is-right"><font-awesome-icon icon="users" class="mr-2"/>15</div>
+                    </div>
+                </div>
+                <div class="is-size-4 mx-5 has-text-left" style="padding-bottom:25px">
+                    <p class="is-size-6">こんにちわこんにちわこんばんわこんにちわ</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column is-half">
+            <div class="card ml-6 my-3">
+                <div class="columns">
+                    <div class="column is-two-third mx-5 is-size-2" style="padding-top:15px; padding-bottom:5px">
+                        <div class="is-size-3 has-text-left">ABCDEF</div>
+                    </div>
+                    <div class="column pt-5 ml-3" style="padding-top:3px; padding-bottom:5px">
+                        <div class="is-size-4 is-right"><font-awesome-icon icon="users" class="mr-2"/>15</div>
+                    </div>
+                </div>
+                <div class="is-size-4 mx-5 has-text-left" style="padding-bottom:25px">
+                    <p class="is-size-6">こんにちわこんにちわこんにちわこんにちわ</p>
+                </div>
+            </div>
+        </div>
+        <div class="column is-half">
+            <div class="card mr-6 my-3">
+                <div class="columns">
+                    <div class="column is-two-third mx-5 is-size-2" style="padding-top:15px; padding-bottom:5px">
+                        <div class="is-size-3 has-text-left">VWXYZ</div>
+                    </div>
+                    <div class="column pt-5 ml-3" style="padding-top:3px; padding-bottom:5px">
+                        <div class="is-size-4 is-right"><font-awesome-icon icon="users" class="mr-2"/>15</div>
+                    </div>
+                </div>
+                <div class="is-size-4 mx-5 has-text-left" style="padding-bottom:25px">
+                    <p class="is-size-6">こんにちわこんにちわこんばんわこんにちわ</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>
