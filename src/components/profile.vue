@@ -8,7 +8,7 @@ import axios from 'axios'
     const user_id = 576074480;
     const token = 'zREPVgEE2hMIBFEjKcWhFEoqGUBji0';
 
-    //配列として宣言
+    //オブジェクトとして宣言
     let profile = reactive({});
     let birthDay = ref('');
     let age = ref();
