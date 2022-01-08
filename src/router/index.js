@@ -9,7 +9,7 @@ const routes = [
   {
     path:'/mypage',
     name:'mypage',
-    component: () => import('../view/myPage.vue')
+    component: () => import('../view/MyPage.vue')
   }
 ]
 
