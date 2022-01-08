@@ -33,7 +33,6 @@ const updateCities = () => {
 }
 
 const verifyUserValue = (user) => {
-  console.log(flattenn(user))
   for (let value of Object.values(flattenn(user))) {
     if (!value) {
       return false
@@ -95,8 +94,6 @@ watch(user, (newUser) => {
   } else {
     flags.isSamePassword = false
   }
-  console.log(flags.allInputted)
-  console.log(flags.isSamePassword)
 })
 
 watch(() => user.region.prefecture, updateCities)
