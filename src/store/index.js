@@ -5,9 +5,16 @@ const store = createStore({
   state() {
     return {
       user: {
+        name: "",
         email: "",
         password: "",
-        confirmationPassword: ""
+        confirmationPassword: "",
+        birthday: "",
+        region: {
+          prefecture: "",
+          city: ""
+        },
+        topics: []
       }
     }
   },
