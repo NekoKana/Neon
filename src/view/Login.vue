@@ -115,6 +115,9 @@ watch(user, (newUser) => {
             <button class="button is-primary">ログイン</button>
           </form>
         </div>
+        <router-link to="/signup">
+          <p>新規登録</p>
+        </router-link>
       </div>
     </div>
   </div>

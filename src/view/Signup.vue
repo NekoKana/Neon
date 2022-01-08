@@ -203,6 +203,9 @@ watch(() => user.region.prefecture, updateCities)
             <button class="button is-primary" :disabled="!flags.allInputted">新規登録</button>
           </form>
         </div>
+        <router-link to="/login">
+          <p>ログイン</p>
+        </router-link>
       </div>
     </div>
   </div>
