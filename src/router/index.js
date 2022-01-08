@@ -4,7 +4,7 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: () => import('../view/Home.vue')
+    redirect: '/login'
   },
   {
     path: '/signup',
