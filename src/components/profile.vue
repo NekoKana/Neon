@@ -1,6 +1,7 @@
 <script setup>
 import { ref, reactive, onMounted } from 'vue'
 import axios from 'axios'
+import IDprefecture from '../js/IDprefecture';
 
    //const birth = new Date(2004, 1, 2, 0, 0, 0,)
 
@@ -12,6 +13,8 @@ import axios from 'axios'
     let profile = reactive({});
     let birthDay = ref('');
     let age = ref();
+
+    let city = ref('');
 
     // const profile = ref({})
     onMounted ( async () => {
@@ -30,6 +33,9 @@ import axios from 'axios'
                 
                 Object.assign(profile, res.data.data)
                 console.log(profile)
+
+                city.value = IDprefecture[profile.city]
+                console.log(IDprefecture[profile.city])
 
                 //誕生日の生成
                 const birth = new Date(profile.birthday * 1000);
@@ -161,7 +167,7 @@ import axios from 'axios'
 
                 <div class="is-flex ml-6 is-align-items-flex-end">
                     <div class="is-size-2 has-text-left" style="flex:0 0 450px;">{{profile.name}}</div>
-                    <div class="is-size-4 has-text-left pb-1" >{{profile.city}}</div>
+                    <div class="is-size-4 has-text-left pb-1" >{{city}}</div>
                 </div>
                 <div class="is-flex mt-1 ml-6">
                     <span class="is-size-5">{{ birthDay }}
