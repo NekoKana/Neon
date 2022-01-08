@@ -9,7 +9,7 @@ import axios from 'axios'
     const token = 'zREPVgEE2hMIBFEjKcWhFEoqGUBji0';
 
     //配列として宣言
-    let profile = ref([]);
+    let profile = reactive({});
     let birthDay = ref('');
     let age = ref();
 
@@ -28,11 +28,11 @@ import axios from 'axios'
                 console.log(res);//レスポンス本体
                 console.log(res.data.data_headers.result_code)//りざるとこーど
                 
-                profile.value = res.data.data;
-                console.log(profile.value.name)
+                Object.assign(profile, res.data.data)
+                console.log(profile)
 
                 //誕生日の生成
-                const birth = new Date(profile.value.birthday * 1000);
+                const birth = new Date(profile.birthday * 1000);
                 const y = birth.getFullYear();
                 const m = birth.getMonth() + 1;
                 const d = birth.getDate();
@@ -41,10 +41,10 @@ import axios from 'axios'
 
                 //年齢の生成
                 const now = new Date();
-                const yy = now.getFullYear();
-                const mm = now.getMonth() + 1;
-                const dd = now.getDate();
-                console.log(yy + '年' + mm + '月' + dd + '日');  
+ //               const yy = now.getFullYear();
+ //               const mm = now.getMonth() + 1;
+ //               const dd = now.getDate();
+ //               console.log(yy + '年' + mm + '月' + dd + '日');  
                 let tmpage = now.getFullYear() - y;
                 let tmpday = new Date(now.getFullYear(), m, d)
                 if(now > tmpday) {
