@@ -43,6 +43,7 @@ const verifyUserValue = (user) => {
 
 onMounted(() => {
   updateCities()
+  flags.allInputted = verifyUserValue(user)
 
   const form = document.getElementById('form')
   form.addEventListener("submit", (event) => {
