@@ -5,7 +5,7 @@ import axios from 'axios'
     const user_id = 894984261;
     const token = "fhTrZhtMs0ob3hriy1aq1MgeRnKgDF";
 
-    let userRooms = reactive([
+    let rooms = reactive([
         {
             room_id:1,
             room_name:'テストネーム',
@@ -19,6 +19,7 @@ import axios from 'axios'
         }
     ]);
 
+
         onMounted(() => {
        axios
            .post('/get_rooms_by_user_id', {
@@ -28,15 +29,15 @@ import axios from 'axios'
            .then((res) => {
                console.log('userRoomのres')
                console.log(res.data.data);
-               Object.assignment(userRooms, res.data.data)
-               console.log(userRooms)
+               Object.assignment(rooms, res.data.data)
+               console.log(rooms)
            })
            .catch((err) => {
                console.log('usrRoomのerr')
                console.log(err)
            })
    })
-    console.log(userRooms)
+    console.log(rooms)
 
 
 </script>
@@ -49,7 +50,7 @@ import axios from 'axios'
     <div class="is-size-3 is-centerd my-5">参加中のグループ</div>
 
     <div class="columns">
-        <div class="column is-half" v-for="userRoom in userRooms" :key="userRoom.room_id">
+        <div class="column is-half" v-for="Room in rooms" :key="userRoom.room_id">
             <div class="card ml-6 my-3">
                 <div class="columns">
                     <div class="column is-two-third mx-5 is-size-2" style="padding-top:15px; padding-bottom:5px">
