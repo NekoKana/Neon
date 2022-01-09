@@ -47,21 +47,21 @@ import axios from 'axios'
 
     <div class="mx-6" style="padding-top: 4px; border-bottom: 1px solid;"> </div>
 
-    <div class="is-size-3 is-centerd my-5">参加中のグループ</div>
+    <div class=" has-text-centered is-size-3 my-5 ">参加中のグループ</div>
 
     <div class="columns">
-        <div class="column is-half" v-for="Room in rooms" :key="userRoom.room_id">
+        <div class="column is-half" v-for="Room in rooms" :key="Room.room_id">
             <div class="card ml-6 my-3">
                 <div class="columns">
                     <div class="column is-two-third mx-5 is-size-2" style="padding-top:15px; padding-bottom:5px">
-                        <div class="is-size-3 has-text-left">{{ userRoom.room_name }}</div>
+                        <div class="is-size-3 has-text-left">{{ Room.room_name }}</div>
                     </div>
                     <div class="column pt-5 ml-4" style="padding-top:3px; padding-bottom:5px">
                         <div class="is-size-4 is-right"><font-awesome-icon icon="users" class="mr-2"/>15</div>
                     </div>
                 </div>
                 <div class="is-size-4 mx-5 has-text-left" style="padding-bottom:25px">
-                    <p class="is-size-6">{{ userRoom.room_description }}</p>
+                    <p class="is-size-6">{{Room.room_description }}</p>
                 </div>
             </div>
         </div>
