@@ -45,7 +45,7 @@ onMounted(() => {
           flags.isCollect = false
         })
       // TODO: 遷移先の変更
-      // router.push({ name: '' })
+      router.push({ name: 'mypage' })
     }
   })
 })

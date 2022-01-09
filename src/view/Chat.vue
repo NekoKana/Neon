@@ -113,12 +113,14 @@ onMounted(() => {
     </figure>
     <div class="media-content">
       <div class="content">
-        <p>
-          <strong>{{ data.name }}</strong>
-          <br>
-          {{ data.text }}
-          <br>
-        </p>
+        <div class="has-text-left">
+          <p>
+            <strong>{{ data.name }}</strong>
+            <br>
+            {{ data.text }}
+            <br>
+          </p>
+        </div>
       </div>
     </div>
   </article>
