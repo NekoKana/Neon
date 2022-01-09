@@ -54,7 +54,9 @@ import axios from 'axios'
             <div class="card ml-6 my-3">
                 <div class="columns">
                     <div class="column is-two-third mx-5 is-size-2" style="padding-top:15px; padding-bottom:5px">
+                      <router-link to="/chat">
                         <div class="is-size-3 has-text-left">{{ Room.room_name }}</div>
+                      </router-link>
                     </div>
                     <div class="column pt-5 ml-4" style="padding-top:3px; padding-bottom:5px">
                         <div class="is-size-4 is-right"><font-awesome-icon icon="users" class="mr-2"/>15</div>
@@ -81,5 +83,5 @@ import axios from 'axios'
             </div>
         </div>
     </div>
-   
+
 </template>
