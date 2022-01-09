@@ -36,8 +36,9 @@ onMounted(() => {
         .post('/login', body)
         .then((res) => {
           flags.isCollect = true
-          document.cookie = res.data.data.token
-          document.cookie = res.data.data.user_id
+          // cookie に保存
+          document.cookie = `token=${res.data.data.token}`
+          document.cookie = `user_id=${res.data.data.user_id}`
         })
         .catch((err) => {
           console.log(err)

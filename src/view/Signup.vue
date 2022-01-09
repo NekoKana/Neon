@@ -1,7 +1,7 @@
 <script setup>
 import axios from 'axios'
 import flattenn from 'flat'
-import { onMounted, reactive, watch } from 'vue'
+import { onMounted, reactive, watch, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { useStore } from 'vuex'
 import Input from '../components/Input.vue'
@@ -34,7 +34,7 @@ const updateCities = () => {
 
 const verifyUserValue = (user) => {
   for (let value of Object.values(flattenn(user))) {
-    if (!value) {
+    if (value === null || value === "") {
       return false
     }
   }
@@ -55,13 +55,21 @@ onMounted(() => {
       // 誕生日をunixtimeに変換
       const birthdayUnixtime = new Date(Date.parse(user.birthday)).getTime() / 1000
 
+      // cityID を特定(適当)
+      let cityID
+      for (const [key, value] of Object.entries(cities)) {
+        if (value.city_name === user.region.city) {
+          cityID = value.city_id
+        }
+      }
+
       // TODO: city と topic_listの入力
       const body = {
         name: user.name,
         email: user.email,
         password: hashedPassword,
         birthday: birthdayUnixtime,
-        city: 1,
+        city: cityID,
         topic_list: [
           1,
           2,
@@ -188,7 +196,7 @@ watch(() => user.region.prefecture, updateCities)
                 </div>
               </div>
               <div class="select">
-                <select v-model="user.region.city">
+                <select v-model="user.region.city" >
                   <option v-for="(city, id) in cities" :key="id">
                     {{ city.city_name }}
                   </option>
